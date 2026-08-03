@@ -24,3 +24,20 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Footer: Dynamic A-B-C // B\nA-C tiling */
+.bar {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+
+@media (max-width: 55rem) {
+  .bar {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .middle {
+    grid-area: 1 / 1 / 2 / -1;
+  }
+}
