@@ -9,7 +9,9 @@
     "start": "next start",
     "check": "eslint . && tsc --noEmit",
     "lint": "eslint",
-    "lint:fix": "eslint --fix"
+    "lint:fix": "eslint --fix",
+    "typecheck": "tsc --noEmit",
+    "prepare": "husky"
   },
   "dependencies": {
     "@react-three/drei": "10.7.7",
@@ -32,6 +34,8 @@
     "eslint-config-prettier": "10.1.5",
     "eslint-plugin-react": "7.37.5",
     "eslint-plugin-react-hooks": "7.1.1",
+    "husky": "9.1.7",
+    "lint-staged": "17.0.8",
     "prettier": "3.9.4",
     "tailwindcss": "4.3.2",
     "typescript-eslint": "8.63.0",
@@ -40,5 +44,14 @@
   "engines": {
     "node": ">=20"
   },
-  "packageManager": "npm@12.0.1"
+  "packageManager": "npm@12.0.1",
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": [
+      "eslint --fix --cache",
+      "prettier --write"
+    ],
+    "*.{css,html}": [
+      "prettier --write"
+    ]
+  }
 }
