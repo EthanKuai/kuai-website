@@ -7,28 +7,53 @@
     "preview": "next build && next start",
     "build": "next build",
     "start": "next start",
-    "check": "eslint . && tsc --noEmit",
-    "lint": "eslint",
-    "lint:fix": "esline --fix"
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,mdx,json,css}\" --cache",
+    "format:write": "prettier --write \"**/*.{ts,tsx,js,jsx,mdx,json,css}\" --cache",
+    "check": "eslint --max-warnings 0 . && tsc --noEmit .",
+    "lint": "eslint --max-warnings 0",
+    "lint:fix": "eslint --fix",
+    "typecheck": "tsc --noEmit",
+    "prepare": "husky"
   },
   "dependencies": {
-    "@react-three/drei": "^10.7.7",
-    "@react-three/fiber": "^9.7.0",
-    "@vercel/analytics": "^2.0.1",
-    "@vercel/speed-insights": "^2.0.0",
-    "next": "16.2.12",
-    "react": "19.2.4",
-    "react-dom": "19.2.4",
-    "three": "^0.185.1"
+    "@react-three/drei": "10.7.7",
+    "@react-three/fiber": "9.6.1",
+    "@vercel/analytics": "2.0.1",
+    "@vercel/speed-insights": "2.0.0",
+    "next": "16.2.11",
+    "react": "19.2.7",
+    "react-dom": "19.2.7",
+    "three": "0.184.0"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.2.12",
-    "tailwindcss": "^4",
-    "typescript": "^5"
+    "@tailwindcss/postcss": "4.3.2",
+    "@types/node": "24.13.2",
+    "@types/react": "19.2.17",
+    "@types/react-dom": "19.2.3",
+    "@eslint/js": "9.39.5",
+    "eslint": "9.39.5",
+    "eslint-config-next": "16.2.11",
+    "eslint-config-prettier": "10.1.5",
+    "eslint-plugin-react": "7.37.5",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "husky": "9.1.7",
+    "lint-staged": "17.0.8",
+    "prettier": "3.9.4",
+    "tailwindcss": "4.3.2",
+    "typescript-eslint": "8.63.0",
+    "typescript": "5.8.3"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "npm@12.0.1",
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": [
+      "eslint --fix --cache",
+      "prettier --write"
+    ],
+    "*.{css,html}": [
+      "prettier --write"
+    ]
   }
 }

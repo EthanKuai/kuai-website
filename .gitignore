@@ -44,3 +44,6 @@ private
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# linting & formatting
+.eslintcache

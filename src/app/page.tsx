@@ -1,5 +1,5 @@
-import SceneLoader from "@/components/SceneLoader"
+import SceneLoader from "@/components/SceneLoader";
 
 export default function Home() {
-  return <SceneLoader />
+  return <SceneLoader />;
 }

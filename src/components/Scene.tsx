@@ -1,6 +1,6 @@
-"use client"
-import { Canvas } from "@react-three/fiber"
-import { OrbitControls } from "@react-three/drei"
+"use client";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
 
 export default function Scene() {
   return (
@@ -12,5 +12,5 @@ export default function Scene() {
       </mesh>
       <OrbitControls />
     </Canvas>
-  )
+  );
 }
