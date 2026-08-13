@@ -7,8 +7,10 @@
     "preview": "next build && next start",
     "build": "next build",
     "start": "next start",
-    "check": "eslint . && tsc --noEmit",
-    "lint": "eslint",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,mdx,json,css}\" --cache",
+    "format:write": "prettier --write \"**/*.{ts,tsx,js,jsx,mdx,json,css}\" --cache",
+    "check": "eslint --max-warnings 0 . && tsc --noEmit .",
+    "lint": "eslint --max-warnings 0",
     "lint:fix": "eslint --fix",
     "typecheck": "tsc --noEmit",
     "prepare": "husky"
