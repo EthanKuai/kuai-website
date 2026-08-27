@@ -3,6 +3,7 @@
 /* Background */
 :root {
   --background: #c5b89d;
+  --text-background: rgb(147 139 127 / 0.2);
   --page-background:
     radial-gradient(ellipse at 10% 8%, rgb(88 69 42 / 0.1), transparent 48%),
     radial-gradient(ellipse at 92% 90%, rgb(88 69 42 / 0.08), transparent 45%),
@@ -13,6 +14,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #302254;
+    --text-background: rgb(10 8 14 / 0.28);
     --page-background:
       radial-gradient(ellipse at 10% 8%, rgb(10 17 44 / 0.28), transparent 48%),
       radial-gradient(ellipse at 92% 90%, rgb(43 18 54 / 0.2), transparent 45%),

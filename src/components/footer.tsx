@@ -4,7 +4,7 @@ import styles from "./footer.module.css";
 
 export default function Footer() {
   return (
-    <footer className="py-6 px-[5%]">
+    <footer className="bg-[var(--text-background)] py-6 px-[5%]">
       <div className={styles.bar}>
         <span className="left mx-1">Ethan Kuai, CS @ Cambridge</span>
 
