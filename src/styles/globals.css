@@ -3,24 +3,20 @@
 /* Background */
 :root {
   --background: #c5b89d;
-  --page-background: linear-gradient(
-    135deg,
-    #c5b89d 0%,
-    #dfd6c3 52%,
-    #bcb093 100%
-  );
+  --page-background:
+    radial-gradient(ellipse at 10% 8%, rgb(88 69 42 / 0.1), transparent 48%),
+    radial-gradient(ellipse at 92% 90%, rgb(88 69 42 / 0.08), transparent 45%),
+    linear-gradient(135deg, #c5b89d 0%, #dfd6c3 52%, #bcb093 100%);
   --foreground: #171717;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #302254;
-    --page-background: linear-gradient(
-      135deg,
-      #243a70 0%,
-      #6a3e75 52%,
-      #302254 100%
-    );
+    --page-background:
+      radial-gradient(ellipse at 10% 8%, rgb(10 17 44 / 0.28), transparent 48%),
+      radial-gradient(ellipse at 92% 90%, rgb(43 18 54 / 0.2), transparent 45%),
+      linear-gradient(135deg, #243a70 0%, #6a3e75 52%, #302254 100%);
     --foreground: #ededed;
   }
 }
