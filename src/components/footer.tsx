@@ -18,7 +18,7 @@ export default function Footer() {
               title={s.name}
               target="_blank"
               rel="external"
-              className="p-5"
+              className="p-5 text-foreground"
             >
               {s.icon}
             </a>
