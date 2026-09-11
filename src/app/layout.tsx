@@ -7,6 +7,7 @@ import { Analytics } from "@vercel/analytics/next";
 import Footer from "@/components/footer";
 
 import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,6 +17,13 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const peignot = localFont({
+  src: "../fonts/Peignot.ttf",
+  variable: "--font-title",
+  display: "swap",
+  preload: true,
 });
 
 export const metadata: Metadata = {
@@ -31,7 +39,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${peignot.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <main className="flex-1">{children}</main>

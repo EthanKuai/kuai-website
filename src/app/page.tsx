@@ -1,5 +1,15 @@
 import SceneLoader from "@/components/SceneLoader";
+import styles from "./page.module.css";
 
 export default function Home() {
-  return <SceneLoader />;
+  return (
+    <div>
+      <h1 className={styles.title}>
+        Ethan
+        <br />
+        Kuai
+      </h1>
+      <SceneLoader />
+    </div>
+  );
 }
