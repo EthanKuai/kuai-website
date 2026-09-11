@@ -28,6 +28,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-text-background: var(--text-background);
 }
 
 body {
