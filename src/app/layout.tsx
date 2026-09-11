@@ -15,6 +15,13 @@ const peignot = localFont({
   preload: true,
 });
 
+const industriaSolid = localFont({
+  src: "../fonts/Industria Solid.otf",
+  variable: "--font-subtitle",
+  display: "swap",
+  preload: true,
+});
+
 const futuraCyrillic = localFont({
   src: [
     { path: "../fonts/FuturaCyrillicLight.ttf", weight: "300" },
@@ -43,7 +50,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${peignot.variable} ${futuraCyrillic.variable} h-full antialiased`}
+      className={`${peignot.variable} ${industriaSolid.variable} ${futuraCyrillic.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <main className="flex-1">{children}</main>

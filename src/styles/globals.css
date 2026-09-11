@@ -9,6 +9,7 @@
     radial-gradient(ellipse at 92% 90%, rgb(88 69 42 / 0.08), transparent 45%),
     linear-gradient(135deg, #c5b89d 0%, #dfd6c3 52%, #bcb093 100%);
   --foreground: #342b20;
+  --foreground-light: #72695e;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,6 +21,7 @@
       radial-gradient(ellipse at 92% 90%, rgb(43 18 54 / 0.2), transparent 45%),
       linear-gradient(135deg, #243a70 0%, #6a3e75 52%, #302254 100%);
     --foreground: #f2edf5;
+    --foreground-light: #b4afb7;
   }
 }
 
@@ -37,6 +39,13 @@ body {
 /* Fonts */
 h1 {
   font-family: var(--font-title);
+}
+
+h2 {
+  margin: 1rem 0 3rem;
+  font-family: var(--font-subtitle);
+  font-size: clamp(1.75rem, 3vw, 3rem);
+  color: var(--foreground-light);
 }
 
 body {

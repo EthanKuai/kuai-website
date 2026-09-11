@@ -9,6 +9,9 @@ export default function Home() {
         <br />
         Kuai
       </h1>
+      <h2 className={styles.subtitle}>
+        If thou gaze into the abyss, the abyss gazes into thee.
+      </h2>
       <p className={styles.introduction}>Hi...</p>
       <SceneLoader />
     </div>
