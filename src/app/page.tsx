@@ -9,6 +9,7 @@ export default function Home() {
         <br />
         Kuai
       </h1>
+      <p className={styles.introduction}>Hi...</p>
       <SceneLoader />
     </div>
   );

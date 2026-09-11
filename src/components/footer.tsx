@@ -25,7 +25,7 @@ export default function Footer() {
           ))}
         </div>
 
-        <span className="right text-right">
+        <span className="text-sm right text-right">
           © 2026 Ethan Kuai
           <br />
           All rights reserved
