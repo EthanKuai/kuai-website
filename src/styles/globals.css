@@ -9,6 +9,7 @@
     radial-gradient(ellipse at 92% 90%, rgb(88 69 42 / 0.08), transparent 45%),
     linear-gradient(135deg, #c5b89d 0%, #dfd6c3 52%, #bcb093 100%);
   --foreground: #342b20;
+  --foreground-light: #72695e;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,19 +21,40 @@
       radial-gradient(ellipse at 92% 90%, rgb(43 18 54 / 0.2), transparent 45%),
       linear-gradient(135deg, #243a70 0%, #6a3e75 52%, #302254 100%);
     --foreground: #f2edf5;
+    --foreground-light: #b4afb7;
   }
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-text-background: var(--text-background);
 }
 
 body {
   background-color: var(--background);
   background-image: var(--page-background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Fonts */
+h1 {
+  font-family: var(--font-title);
+}
+
+h2 {
+  margin: 1rem 0 3rem;
+  font-family: var(--font-subtitle);
+  font-size: clamp(1.75rem, 3vw, 3rem);
+  color: var(--foreground-light);
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 1.25rem;
+}
+
+@theme inline {
+  --text-base: 1.25rem;
+  --text-sm: 1rem;
 }
